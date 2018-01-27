@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('name');
     table.integer('cp');
-    table.boolean('in_gym');
+    table.boolean('in_gym').defaultTo(false);
     table.integer('trainer_id').references('id').inTable('trainers').notNull().onDelete('cascade');
     table.timestamps(true, true);
   })

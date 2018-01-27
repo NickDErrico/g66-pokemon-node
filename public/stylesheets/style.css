@@ -14,12 +14,34 @@
  * limitations under the License.
  */
 
+table {
+  background-color: white;
+  opacity: .8;
+}
+
+li {
+  color: white;
+}
+
+.h3 {
+  display: inline-block;
+}
+
+.card {
+  background-color: white;
+  border: solid black 1px;
+  display: inline-block;
+  /* height: 100px; */
+  width: 30%;
+}
+
 body {
   margin: 0;
 }
 
 /* Disable ugly boxes around images in IE10 */
-a img{
+
+a img {
   border: 0px;
 }
 
@@ -33,11 +55,12 @@ a img{
   color: #fff;
 }
 
-.pokemon-main{
+.pokemon-main {
   background-color: #eee;
 }
 
-.app-content{
+.app-content {
+  height: 100%;
   padding: 20px;
 }
 
@@ -49,7 +72,6 @@ a img{
   z-index: 50;
   margin: 0 !important;
 }
-
 
 .mdl-textfield--expandable {
   width: auto;
@@ -68,115 +90,110 @@ a img{
   display: none !important;
 }
 
-
 .pokemon-logo-image {
-  height: 28px;
+  height: 100%;
   width: 140px;
 }
-
 
 .pokemon-header {
   overflow: visible;
   background-color: white;
 }
 
-  .pokemon-header .material-icons {
-    color: #767777 !important;
-  }
+.pokemon-header .material-icons {
+  color: #767777 !important;
+}
 
-  .pokemon-header .mdl-layout__drawer-button {
-    background: transparent;
-    color: #767777;
-  }
+.pokemon-header .mdl-layout__drawer-button {
+  background: transparent;
+  color: #767777;
+}
 
-  .pokemon-header .mdl-navigation__link {
-    color: #757575;
-    font-weight: 700;
-    font-size: 14px;
-  }
+.pokemon-header .mdl-navigation__link {
+  color: #757575;
+  font-weight: 700;
+  font-size: 14px;
+}
 
-  .pokemon-navigation-container {
-    /* Simple hack to make the overflow happen to the left instead... */
-    direction: rtl;
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 500px;
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.pokemon-navigation-container {
+  /* Simple hack to make the overflow happen to the left instead... */
+  direction: rtl;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  width: 500px;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .pokemon-navigation {
-    /* ... and now make sure the content is actually LTR */
-    direction: ltr;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    width: 800px;
-  }
+.pokemon-navigation {
+  /* ... and now make sure the content is actually LTR */
+  direction: ltr;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 800px;
+}
 
-  .pokemon-search-box.is-focused + .pokemon-navigation-container {
-    opacity: 0;
-    width: 100px;
-  }
+.pokemon-search-box.is-focused+.pokemon-navigation-container {
+  opacity: 0;
+  width: 100px;
+}
 
+.pokemon-navigation .mdl-navigation__link {
+  display: inline-block;
+  height: 60px;
+  line-height: 68px;
+  background-color: transparent !important;
+  border-bottom: 4px solid transparent;
+}
 
-  .pokemon-navigation .mdl-navigation__link {
-    display: inline-block;
-    height: 60px;
-    line-height: 68px;
-    background-color: transparent !important;
-    border-bottom: 4px solid transparent;
-  }
+.pokemon-navigation .mdl-navigation__link:hover {
+  border-bottom: 4px solid #E3B845;
+}
 
-    .pokemon-navigation .mdl-navigation__link:hover {
-      border-bottom: 4px solid #E3B845;
-    }
+.pokemon-search-box {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  margin-left: 16px;
+  margin-right: 16px;
+}
 
-  .pokemon-search-box {
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2;
-    margin-left: 16px;
-    margin-right: 16px;
-  }
-
-  .pokemon-more-button {
-    -webkit-order: 3;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-
+.pokemon-more-button {
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+}
 
 .pokemon-drawer {
   border-right: none;
 }
 
-  .pokemon-drawer-separator {
-    height: 1px;
-    background-color: #dcdcdc;
-    margin: 8px 0;
-  }
+.pokemon-drawer-separator {
+  height: 1px;
+  background-color: #dcdcdc;
+  margin: 8px 0;
+}
 
-  .pokemon-drawer .mdl-navigation__link.mdl-navigation__link {
-    font-size: 14px;
-    color: #757575;
-  }
+.pokemon-drawer l-navigation__link.mdl-navigation__link {
+  font-size: 14px;
+  color: #757575;
+}
 
-  .pokemon-drawer span.mdl-navigation__link.mdl-navigation__link {
-    color: #8bc34a;
-  }
+.pokemon-drawer span.mdl-navigation__link.mdl-navigation__link {
+  color: #8bc34a;
+}
 
-  .pokemon-drawer .mdl-layout-title {
-    position: relative;
-    background: #6ab344;
-    height: 160px;
-  }
+.pokemon-drawer .mdl-layout-title {
+  position: relative;
+  background: #6ab344;
+  height: 160px;
+}
 
-    .pokemon-drawer .pokemon-logo-image {
-      position: absolute;
-      bottom: 16px;
-    }
+.pokemon-drawer .pokemon-logo-image {
+  position: absolute;
+  bottom: 16px;
+}
 
 .pokemon-be-together-section {
   position: relative;
@@ -209,11 +226,11 @@ a img{
   padding-top: 400px;
 }
 
-  .pokemon-create-character a {
-    text-decoration: none;
-    color: #767777;
-    font-weight: 300;
-  }
+.pokemon-create-character a {
+  text-decoration: none;
+  color: #767777;
+  font-weight: 300;
+}
 
 .pokemon-screen-section {
   position: relative;
@@ -248,11 +265,10 @@ a img{
   margin-right: 32px;
 }
 
-  .pokemon-wear .pokemon-screen-image {
-    width: 40%;
-    z-index: 1;
-  }
-
+.pokemon-wear .pokemon-screen-image {
+  width: 40%;
+  z-index: 1;
+}
 
 .pokemon-phone {
   display: inline-block;
@@ -260,11 +276,10 @@ a img{
   margin-right: 48px;
 }
 
-  .pokemon-phone .pokemon-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
-
+.pokemon-phone .pokemon-screen-image {
+  width: 100%;
+  z-index: 1;
+}
 
 .pokemon-tablet {
   display: inline-block;
@@ -272,16 +287,15 @@ a img{
   margin-right: 64px;
 }
 
-  .pokemon-tablet .pokemon-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
+.pokemon-tablet .pokemon-screen-image {
+  width: 100%;
+  z-index: 1;
+}
 
-  .pokemon-tablet .pokemon-link {
-    display: block;
-    z-index: 2;
-  }
-
+.pokemon-tablet .pokemon-link {
+  display: block;
+  z-index: 2;
+}
 
 .pokemon-tv {
   display: inline-block;
@@ -289,11 +303,10 @@ a img{
   margin-right: 80px;
 }
 
-  .pokemon-tv .pokemon-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
-
+.pokemon-tv .pokemon-screen-image {
+  width: 100%;
+  z-index: 1;
+}
 
 .pokemon-auto {
   display: inline-block;
@@ -301,16 +314,15 @@ a img{
   overflow: hidden;
 }
 
-  .pokemon-auto .pokemon-screen-image {
-    display: block;
-    height: 300px;
-    z-index: 1;
-  }
-
+.pokemon-auto .pokemon-screen-image {
+  display: block;
+  height: 300px;
+  z-index: 1;
+}
 
 .pokemon-wear-section {
   position: relative;
-  background: url('/images/ball_background_opaque.png') center top no-repeat;
+  background: url('/images/pokemon-background-lg.jpg') center top no-repeat;
   background-size: cover;
   height: 800px;
 }
@@ -331,24 +343,24 @@ a img{
   color: white;
 }
 
-  .pokemon-wear-band-text p {
-    padding-top: 8px;
-  }
+.pokemon-wear-band-text p {
+  padding-top: 8px;
+}
 
 .pokemon-link {
   text-decoration: none;
   color: #8bc34a !important;
 }
 
-  .pokemon-link:hover {
-    color: #E3B845 !important;
-  }
+.pokemon-link:hover {
+  color: #E3B845 !important;
+}
 
-  .pokemon-link .material-icons {
-    position: relative;
-    top: -1px;
-    vertical-align: middle;
-  }
+.pokemon-link .material-icons {
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+}
 
 .pokemon-alt-link {
   text-decoration: none;
@@ -356,14 +368,14 @@ a img{
   font-size: 16px;
 }
 
-  .pokemon-alt-link:hover {
-    color: #E3B845 !important;
-  }
+.pokemon-alt-link:hover {
+  color: #E3B845 !important;
+}
 
-  .pokemon-alt-link .material-icons {
-    position: relative;
-    top: 6px;
-  }
+.pokemon-alt-link .material-icons {
+  position: relative;
+  top: 6px;
+}
 
 .pokemon-customized-section {
   text-align: center;
@@ -376,9 +388,9 @@ a img{
   padding: 80px 16px 0 16px;
 }
 
-  .pokemon-customized-section-text p {
-    padding-top: 16px;
-  }
+.pokemon-customized-section-text p {
+  padding-top: 16px;
+}
 
 .pokemon-customized-section-image {
   background: url('images/devices.jpg') center top no-repeat;
@@ -393,95 +405,91 @@ a img{
   margin-right: auto;
 }
 
-  .pokemon-more-section .pokemon-section-title {
-    margin-left: 12px;
-    padding-bottom: 24px;
-  }
-
-.pokemon-card-container {
+.pokemon-more-section .pokemon-section-title {
+  margin-left: 12px;
+  padding-bottom: 24px;
 }
 
-  .pokemon-card-container .mdl-card__media {
-    overflow: hidden;
-    background: transparent;
-  }
+.pokemon-card-container {}
 
-    .pokemon-card-container .mdl-card__media img {
-      width: 100%;
-    }
+.pokemon-card-container .mdl-card__media {
+  overflow: hidden;
+  background: transparent;
+}
 
-  .pokemon-card-container .mdl-card__title {
-    background: transparent;
-    height: auto;
-  }
+.pokemon-card-container .mdl-card__media img {
+  width: 100%;
+}
 
-  .pokemon-card-container .mdl-card__title-text {
-    color: black;
-    height: auto;
-  }
+.pokemon-card-container .mdl-card__title {
+  background: transparent;
+  height: auto;
+}
 
-  .pokemon-card-container .mdl-card__supporting-text {
-    height: auto;
-    color: black;
-    padding-bottom: 56px;
-  }
+.pokemon-card-container .mdl-card__title-text {
+  color: black;
+  height: auto;
+}
 
-  .pokemon-card-container .mdl-card__actions {
-    position: absolute;
-    bottom: 0;
-  }
+.pokemon-card-container .mdl-card__supporting-text {
+  height: auto;
+  color: black;
+  padding-bottom: 56px;
+}
 
-  .pokemon-card-container .mdl-card__actions a {
-    border-top: none;
-    font-size: 16px;
-  }
+.pokemon-card-container .mdl-card__actions {
+  position: absolute;
+  bottom: 0;
+}
+
+.pokemon-card-container .mdl-card__actions a {
+  border-top: none;
+  font-size: 16px;
+}
 
 .pokemon-footer {
   background-color: #fafafa;
   position: relative;
 }
 
-  .pokemon-footer a:hover {
-    color: #8bc34a;
-  }
+.pokemon-footer a:hover {
+  color: #8bc34a;
+}
 
-  .pokemon-footer .mdl-mega-footer--top-section::after {
-    border-bottom: none;
-  }
+.pokemon-footer .mdl-mega-footer--top-section::after {
+  border-bottom: none;
+}
 
-  .pokemon-footer .mdl-mega-footer--middle-section::after {
-    border-bottom: none;
-  }
+.pokemon-footer .mdl-mega-footer--middle-section::after {
+  border-bottom: none;
+}
 
-  .pokemon-footer .mdl-mega-footer--bottom-section {
-    position: relative;
-  }
+.pokemon-footer .mdl-mega-footer--bottom-section {
+  position: relative;
+}
 
-  .pokemon-footer .mdl-mega-footer--bottom-section a {
-    margin-right: 2em;
-  }
+.pokemon-footer .mdl-mega-footer--bottom-section a {
+  margin-right: 2em;
+}
 
-  .pokemon-footer .mdl-mega-footer--right-section a .material-icons {
-    position: relative;
-    top: 6px;
-  }
-
+.pokemon-footer .mdl-mega-footer--right-section a .material-icons {
+  position: relative;
+  top: 6px;
+}
 
 .pokemon-link-menu:hover {
   cursor: pointer;
 }
 
-
 /**** Mobile layout ****/
+
 @media (max-width: 900px) {
   .pokemon-navigation-container {
     display: none;
   }
-
   .pokemon-title {
     display: none !important;
   }
-
   .pokemon-mobile-title {
     display: block !important;
     position: absolute;
@@ -489,61 +497,48 @@ a img{
     top: 12px;
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
-
   /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
      consecutive "+" operators in some cases. Therefore, we need to use both
      here to cover all the bases. */
-  .pokemon.pokemon-search-box.is-focused ~ .pokemon-mobile-title,
-  .pokemon-search-box.is-focused + .pokemon-navigation-container + .pokemon-mobile-title {
+  .pokemon.pokemon-search-box.is-focused~.pokemon-mobile-title, .pokemon-search-box.is-focused+.pokemon-navigation-container+.pokemon-mobile-title {
     opacity: 0;
   }
-
   .pokemon-more-button {
     display: none;
   }
-
   .pokemon-search-box.is-focused {
     width: calc(100% - 48px);
   }
-
   .pokemon-search-box .mdl-textfield__expandable-holder {
     width: 100%;
   }
-
   .pokemon-be-together-section {
     height: 350px;
   }
-
   .pokemon-slogan {
     font-size: 26px;
     margin: 0 16px;
     padding-top: 24px;
   }
-
   .pokemon-sub-slogan {
     font-size: 16px;
     margin: 0 16px;
     padding-top: 8px;
   }
-
   .pokemon-create-character {
     padding-top: 200px;
     font-size: 16px;
   }
-
   .pokemon-create-character img {
     height: 12px;
   }
-
   .pokemon-fab {
     display: none;
   }
-
   .pokemon-wear-band-text {
     margin-left: 0;
     padding: 16px;
   }
-
   .pokemon-footer .mdl-mega-footer--bottom-section {
     display: none;
   }
